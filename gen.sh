@@ -1,0 +1,1 @@
+mvn archetype:generate -DinteractiveMode=false -DarchetypeCatalog=internal -DgroupId=nk3310.github.com -DartifactId=Oauth2 -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0-SNAPSHOT -Dpackage=war 
