@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nk3310.github.com</groupId>
+    <artifactId>Oauth2</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>Oauth2</name>
+    <url>https://github.com/nk3310/Oauth2</url>
+
+    <properties>
+        
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+    
+       
+    
+    </repositories>
+    
+    <dependencies>
+       
+       <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.8.2</version>
+          <scope>test</scope>
+       </dependency>
+       
+       <dependency>
+          <groupId>org.jdon</groupId>
+          <artifactId>jdonframework</artifactId>
+          <version>6.9-SNAPSHOT</version>
+       </dependency>
+       
+       <!-- jdonmvc lib start-->
+       <dependency>
+          <groupId>com.jdon</groupId>
+          <artifactId>mvc</artifactId>
+          <version>1.1-SNAPSHOT</version>
+       </dependency>
+       
+       <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+          <version>2.5</version>
+          <scope>provided</scope>
+       </dependency>
+       
+       <dependency>
+          <groupId>org.mybatis</groupId>
+	  <artifactId>mybatis</artifactId>
+	  <version>3.3.0</version>
+       </dependency>
+        
+       <dependency>
+	  <groupId>org.apache.shiro</groupId>
+	  <artifactId>shiro-core</artifactId>
+	  <version>1.2.4</version>
+       </dependency>
+        
+       <dependency>
+	  <groupId>org.apache.shiro</groupId>
+	  <artifactId>shiro-web</artifactId>
+	  <version>1.2.4</version>
+       </dependency>
+
+
+
+          
+
+          
+ 
+    </dependencies>
+  
+   <build>
+        <finalName> ${project.artifactId}</finalName>
+        <plugins>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <showWeaveInfo>true</showWeaveInfo>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>aspectj-compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <outputDirectory/>
+                </configuration>
+            </plugin>
+           
+        </plugins>
+    </build>
+
+</project>
