@@ -1,0 +1,13 @@
+bin
+build
+.gitignore
+*.log
+.gradle
+.settings
+.classpath
+.project
+main/jdon.log
+target
+gradle
+gradlew
+gradlew.bat
